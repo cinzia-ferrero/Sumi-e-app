@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/string_progress"
+        android:layout_below="@+id/learn_text1">
+
+        <ImageView
+            android:id="@+id/suzuri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:padding="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/suzuri" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/string_progress"
+        style="@style/learn_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progress_row"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/progress" />
+
+    <LinearLayout
+        android:id="@+id/progress_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:progressDrawable="@drawable/custom_progressbar" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_button2continua"
+        style="@style/style_button_continue"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/custom_button_continue"
+        android:onClick="button2continue"
+        android:text="Continue"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/buttonback"
+        style="@style/style_button_back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/custom_button_back"
+        android:onClick="button2back"
+        android:text="Back" />
+
+
+</RelativeLayout>

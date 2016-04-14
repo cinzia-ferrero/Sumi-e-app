@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonback"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <ImageView
+                android:id="@+id/suzuri_ink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:padding="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/suzuri_withink" />
+
+            <ImageView
+                android:id="@+id/acqua"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:padding="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/acqua" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/piatto"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2"
+            android:adjustViewBounds="true"
+            android:padding="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/piattino_rosso" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_button3continua"
+        style="@style/style_button_continue"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/custom_button_continue"
+        android:onClick="button3continue"
+        android:text="Continue"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/buttonback"
+        style="@style/style_button_back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/custom_button_back"
+        android:onClick="button3back"
+        android:text="Back" />
+
+
+</RelativeLayout>

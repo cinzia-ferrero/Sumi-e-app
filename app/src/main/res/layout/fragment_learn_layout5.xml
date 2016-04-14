@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button5back"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/suzuri_ink5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:padding="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/suzuri_withink" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/piatto_nero5"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2"
+            android:adjustViewBounds="true"
+            android:padding="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/piattino_nero_media" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_button5continua"
+        style="@style/style_button_continue"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/custom_button_continue"
+        android:onClick="button5continue"
+        android:text="Continue"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button5back"
+        style="@style/style_button_back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/custom_button_back"
+        android:onClick="button5back"
+        android:text="Back" />
+
+
+</RelativeLayout>

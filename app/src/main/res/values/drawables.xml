@@ -1,0 +1,7 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item name="ic_description_black_48px" type="drawable">@drawable/ic_description_black_48px
+    </item>
+    <item name="ic_photo_black_48px" type="drawable">@drawable/ic_photo_black_48px</item>
+    <item name="ic_school_black_48px" type="drawable">@drawable/ic_school_black_48px</item>
+    <item name="ic_share_black_48px" type="drawable">@drawable/ic_share_black_48px</item>
+</resources>

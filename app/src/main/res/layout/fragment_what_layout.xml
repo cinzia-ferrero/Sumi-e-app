@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="24dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/kanji" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/whattext" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/whattext2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/mamura" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/whattext3" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/whattext4" />
+
+    </LinearLayout>
+</ScrollView>

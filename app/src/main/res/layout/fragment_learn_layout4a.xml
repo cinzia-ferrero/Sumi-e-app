@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/header4a"
+        style="@style/learn_text_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/learn4atextH" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons"
+        android:layout_below="@id/header4a"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn4atext" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn4atext2"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn4atext3" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/tap" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/acaso" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp">
+
+        <Button
+            style="@style/style_button_back"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/custom_button_back"
+            android:onClick="button4aback"
+            android:text="Back" />
+
+        <Button
+            style="@style/style_button_continue"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/custom_button_continue"
+            android:onClick="button4acontinue"
+            android:text="Continue" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

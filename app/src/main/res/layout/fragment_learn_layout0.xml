@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/learn_text_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn0textH" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn0text" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="24dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/choboku" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn0text2" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn0text3" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            style="@style/style_button_continue"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/custom_button_continue"
+            android:onClick="button0continue"
+            android:text="Continue" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/header5a"
+        style="@style/learn_text_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/learn5textH" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttons"
+        android:layout_below="@id/header5a"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn5atext" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn5atext2"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn5atext3" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:paddingTop="24dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/tap" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp">
+
+        <Button
+            style="@style/style_button_back"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/custom_button_back"
+            android:onClick="button5aback"
+            android:text="Back" />
+
+        <Button
+            style="@style/style_button_continue"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/custom_button_continue"
+            android:onClick="button5acontinue"
+            android:text="Continue" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

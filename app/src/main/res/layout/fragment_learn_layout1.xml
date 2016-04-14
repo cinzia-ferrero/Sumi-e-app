@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/learn_text_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn1textH" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn1text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/img_learn1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="6"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/box_set" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn1text2" />
+
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn1text3" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn1text4" />
+
+        <TextView
+            style="@style/learn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/learn1text5" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <Button
+                style="@style/style_button_back"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/custom_button_back"
+                android:onClick="button1back"
+                android:text="Back" />
+
+            <Button
+                style="@style/style_button_continue"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/custom_button_continue"
+                android:onClick="button1continue"
+                android:text="Continue" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

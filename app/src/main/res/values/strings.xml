@@ -1,0 +1,151 @@
+<resources>
+    <string name="app_name">Sumi-e</string>
+    <string name="subtitle_app_name">The world of black and white</string>
+    <string name="menu_whatIsSumie">What is Sumi-e</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_Learn">Learn it</string>
+    <string name="menu_share">Share</string>
+
+    <string name="learn0textH">Fundamentals of Sumi-e</string>
+    <string name="learn0text">
+        The foundation of sumi-e upon which you can start to learn is the preparation of choboku. This
+        means to create three shades of ink inside the brush.
+    </string>
+    <string name="learn0text2">
+        Every time you want to paint a brush stroke, you have to make the choboku first.
+    </string>
+    <string name="learn0text3">
+        Let\'s go through the five step you need to learn to make choboku.
+    </string>
+
+    <string name="learn1textH">The First Step</string>
+    <string name="learn1text">
+        At the beginning you have to know which tools are essential for sumi-e.
+        They are called the Four Treasures: ink stick (墨 sumi), ink stone (硯 suzuri), brush (筆 fude)
+        and paper (和紙 washi).
+    </string>
+    <string name="learn1text2">
+        Sumi is made mainly of soot and animal glue, sometimes with incense or medicinal scents
+        added.
+    </string>
+    <string name="learn1text3">
+        Suzuri is a stone mortar for the grinding and containment of ink.
+    </string>
+    <string name="learn1text4">
+        Washi is commonly made using fibers from cotton, hemp, mulberry and various other plants.
+    </string>
+    <string name="learn1text5">
+        The brushes come in various shapes and sizes, and are usually made using animal hair for
+        the bristles. Typical animal hair may come from goats, sheep, horse-hair, etc. They can be
+        divided into three basic types: brown hair, white hair and mixed hair.
+    </string>
+
+    <string name="learn2textH">The Second Step</string>
+    <string name="learn2atext">
+        To make ink from the sumi, you have to apply some water onto the suzuri and then gradually rub
+        the inkstick on it. You have to continue the process (eventually adding some water) until the
+        water become dark enough.
+    </string>
+    <string name="learn2atext2">
+        Hit the button continue and try it.
+    </string>
+    <string name="learn2atext3">
+        Rub the inkstick on the suzuri to prepare sumi.
+    </string>
+
+    <string name="learn3textH">The Third Step</string>
+    <string name="learn3atext">
+        Now it\'s time to dilute ink to create the light color. You have to fill up the brush with water
+        and then drain it into a dish. After you have to add a little bit of sumi and mix it.
+    </string>
+    <string name="learn3atext2">
+        Hit the button continue and try it.
+    </string>
+    <string name="learn3atext3">
+        Take at first the water and add it to the dish, then add the ink.
+    </string>
+
+
+    <string name="learn4atextH">The Fourth Step</string>
+    <string name="learn4atext">
+        Now you have to create the middle color. You have the light color in the brush and you have
+        to mix a little bit of pure sumi. Blend it carefully in a clean dish and you will have a
+        beautiful shade. However pay attention to not dive the brush another time in the water or in
+        the diluted sumi.
+    </string>
+    <string name="learn4atext2">
+        Hit the button continue and try it.
+    </string>
+    <string name="learn4atext3">
+        Take the ink from the suzuri and then mix the color in the dish.
+    </string>
+
+
+    <string name="learn5textH">The Fifth Step</string>
+    <string name="learn5atext">
+        Finally you have to add a little bit of sumi on the brush tip. You can take it from the suzuri
+        and then squash lightly the brush tip on the border of the dish to blend a bit the color.
+    </string>
+    <string name="learn5atext2">
+        Hit the button continue and try it.
+    </string>
+    <string name="learn5atext3">
+        Take the ink from the suzuri and then press on the border of the dish.
+    </string>
+
+    <string name="progress">Your progress:</string>
+
+    <string name="whattext">
+        The first kanji (墨) is read \"sumi\" and means ink. It is composed by the kanji black ("黑")
+        and soil ("土") due to the earthly origins of the dark soot used in its production.
+    </string>
+    <string name="whattext2">
+        The second kanji (絵) is read \"e\" and means painting. It is composed by the kanji black ("黑")
+        and soil ("土") due to the earthly origins of the dark soot used in its production.
+    </string>
+    <string name="whattext3">
+        Sumi-e uses only black ink in various concentrations. It\'s the art to make beautiful masterpiece
+        with black, white and all the infinite shades between them. Sometimes a little bit of color is
+        added (for example red).
+    </string>
+    <string name="whattext4">
+        The goal of sumi-e is not simply to reproduce the appearance of the subject, but to capture its
+        spirit. To paint a flower, there is no need to perfectly match its petals and colors, but it is
+        essential to convey its liveliness and fragrance. It\'s an art that captures the unseen.
+    </string>
+
+    <string name="home">Welcome!!</string>
+    <string name="hometext">
+        In this app you can learn what is sumi-e, admire some beautiful paintings and learn the fundamentals
+        of this amazing art.
+    </string>
+    <string name="hometext2">
+        Hope you will enjoy this adventure!
+    </string>
+
+    <string name="learn6text">
+        Great!!
+    </string>
+    <string name="learn6text2">
+       You have learnt a lot so far!
+    </string>
+    <string name="learn6text3">
+        Remember that making a good choboku is the first step to create beautiful shades. So each time
+        that you take on it, be careful, take your time and focus on what you are doing.
+    </string>
+    <string name="learn6text4">
+        Keep going and enter the world of black and white.
+    </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string-array name="image_ids">
+        <item>@drawable/image_1</item>
+        <item>@drawable/image_2</item>
+    </string-array>
+
+</resources>
