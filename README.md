@@ -13,3 +13,7 @@ To set up the  development environment you need to:<br>
   
 Then you can download the whole project folder and put it in the "AndroidStudioProjects" folder.<br>
 Finally you can [run the app](http://developer.android.com/training/basics/firstapp/running-app.html) on your device or on the Emulator.
+
+#### Contact
+Cinzia Ferrero
+cinzia_90@hotmail.it
