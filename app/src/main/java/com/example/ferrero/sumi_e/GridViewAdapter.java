@@ -33,17 +33,16 @@ public class GridViewAdapter extends ArrayAdapter<ImageItem> {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(layoutResourceId, parent, false);
             holder = new ViewHolder();
-            holder.imageTitle = (TextView) row.findViewById(R.id.text);
+            holder.imageTitle = (TextView) row.findViewById(R.id.detail_title);
             holder.image = (ImageView) row.findViewById(R.id.detail_image);
             row.setTag(holder);
         } else {
             holder = (ViewHolder) row.getTag();
         }
 
-
         ImageItem item = data.get(position);
         holder.imageTitle.setText(item.getTitle());
-        holder.image.setImageBitmap(item.getImage(getContext()));
+        holder.image.setImageBitmap(item.getImage(context));
         return row;
     }
 

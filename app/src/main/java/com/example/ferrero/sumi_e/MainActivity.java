@@ -252,7 +252,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_learn:
                 fragmentClass = FragmentLearn0.class;
                 break;
-            /*case R.id.nav_share:
+            case R.id.nav_share:
+                return false;
+                /*
                 fragmentClass = FragmentShare.class;
                 break;*/
             default:
