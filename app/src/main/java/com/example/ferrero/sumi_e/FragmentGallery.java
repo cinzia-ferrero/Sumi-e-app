@@ -17,30 +17,35 @@ import android.widget.GridView;
 import java.util.ArrayList;
 
 public class FragmentGallery extends Fragment {
-    View myFragmentView;
+
+    public static final String KEY_TITLE = "title";
+    public static final String KEY_IMAGE = "image";
+    private static String TAG = FragmentGallery.class.getSimpleName();
+    private View myFragmentView;
     private GridView gridView;
     private GridViewAdapter gridAdapter;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+
         myFragmentView = inflater.inflate(R.layout.fragment_gallery_layout, container, false);
 
         gridView = (GridView) myFragmentView.findViewById(R.id.gridView);
         gridAdapter = new GridViewAdapter(myFragmentView.getContext(), R.layout.gallery_grid_item_layout, getData());
         gridView.setAdapter(gridAdapter);
 
+
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 ImageItem item = (ImageItem) parent.getItemAtPosition(position);
 
-                //Create intent
-                Intent intent = new Intent(getActivity(), DetailsActivity.class);
-                intent.putExtra("title", item.getTitle());
-                intent.putExtra("image", item.getImageBig(myFragmentView.getContext()));
-
                 //Start details activity
-                startActivity(intent);
+                startActivity(DetailsActivity.getStartIntent(getContext())
+                        .putExtra(KEY_TITLE, item.getTitle())
+                        .putExtra(KEY_IMAGE, item.getTitle().contains("0") ? R.drawable.image_1 : R.drawable.image_2)
+                );
+
             }
         });
 

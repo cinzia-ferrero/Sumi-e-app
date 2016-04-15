@@ -1,6 +1,7 @@
 package com.example.ferrero.sumi_e;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -253,10 +254,15 @@ public class MainActivity extends AppCompatActivity
                 fragmentClass = FragmentLearn0.class;
                 break;
             case R.id.nav_share:
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT,
+                        "We're keeping a kitten hostage. Share this app with your friends if you don't want the kitten to suffer. Link: https://github.com/cinzia-ferrero/Sumi-e-app  \np.s. Think about the kitten");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
                 return false;
-                /*
-                fragmentClass = FragmentShare.class;
-                break;*/
+
+
             default:
                 fragmentClass = FragmentWhatIs.class;
         }
