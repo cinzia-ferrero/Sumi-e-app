@@ -2,7 +2,6 @@ package com.example.ferrero.sumi_e;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -21,7 +20,7 @@ public class FragmentLearnStep5b extends Fragment implements View.OnTouchListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        myFragmentView = inflater.inflate(R.layout.fragment_learn_layout5, container, false);
+        myFragmentView = inflater.inflate(R.layout.fragment_learn_layout5b, container, false);
 
         imgpiatto = (ImageView) myFragmentView.findViewById(R.id.piatto_nero5);
         imgpiatto.setOnTouchListener(this);
@@ -33,6 +32,13 @@ public class FragmentLearnStep5b extends Fragment implements View.OnTouchListene
     }
 
 
+    /*
+     *
+     * This method checks if the image of the suzuri is pressed. Furthermore it checks that the image of
+     * the dish is pressed on the border of the dish itself. Also it updates the variable imgPremuta accordingly
+     * to which quarter of the annulus is pressed.
+     *
+    */
     @Override
     public boolean onTouch(View view, MotionEvent event) {
 
@@ -103,6 +109,12 @@ public class FragmentLearnStep5b extends Fragment implements View.OnTouchListene
         return false;
     }
 
+    /*
+     *
+     * This method checks if the user taps the image in the right order and change the images on the
+     * screen accordingly. When the process is finished the button Continue is shown.
+     *
+    */
     public void checkState() {
         switch (stato) {
             case 0:

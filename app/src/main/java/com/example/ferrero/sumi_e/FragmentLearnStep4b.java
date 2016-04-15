@@ -2,7 +2,6 @@ package com.example.ferrero.sumi_e;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -27,7 +26,7 @@ public class FragmentLearnStep4b extends Fragment implements View.OnTouchListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        myFragmentView = inflater.inflate(R.layout.fragment_learn_layout4, container, false);
+        myFragmentView = inflater.inflate(R.layout.fragment_learn_layout4b, container, false);
 
         imgpiatto = (ImageView) myFragmentView.findViewById(R.id.piatto_nero);
         imgpiatto.setOnTouchListener(this);
@@ -40,6 +39,12 @@ public class FragmentLearnStep4b extends Fragment implements View.OnTouchListene
         return myFragmentView;
     }
 
+    /*
+     *
+     * This method checks if the image of the suzuri is pressed and if the movement on the dish is correct.
+     * The progress bar is updated accordingly to the user progress mixing the ink.
+     *
+    */
     @Override
     public boolean onTouch(View view, MotionEvent event) {
 
@@ -75,19 +80,20 @@ public class FragmentLearnStep4b extends Fragment implements View.OnTouchListene
 
                         double distanceFromCenter = Math.sqrt(Math.pow((double) (centerX - xTouch), (double) 2)
                                 + Math.pow((double) (centerY - yTouch), (double) 2));
-                        if (distanceFromCenter < radius) {
+
+                        if (distanceFromCenter < radius) { // the finger has to be inside the dish
                             currentX = event.getRawX();
                             currentY = event.getRawY();
                             double distanceFromPrev = Math.sqrt(Math.pow((double) (prevX - xTouch), (double) 2)
                                     + Math.pow((double) (prevY - yTouch), (double) 2));
-                            if (distanceFromPrev > width * 0.2) {
+                            if (distanceFromPrev > width * 0.2) { // the finger has to move (so the new position has to be significantly different from the previous one)
                                 prevX = currentX;
                                 prevY = currentY;
                                 points += 2;
                                 progressBar.setProgress(points);
                             }
                         }
-                    } else if (points >= 100) {
+                    } else if (points >= 100) { // change the state to the final and call checkstate() to show the Continue button
                         stato = 2;
                         checkState();
                     }
@@ -126,6 +132,12 @@ public class FragmentLearnStep4b extends Fragment implements View.OnTouchListene
         return false;
     }
 
+    /*
+     *
+     * This method checks if the user taps first the image of suzuri and then change the image of dish
+     * when the user first enter it. When the process is finished the button Continue is shown.
+     *
+    */
     public void checkState() {
         switch (stato) {
             case 0:

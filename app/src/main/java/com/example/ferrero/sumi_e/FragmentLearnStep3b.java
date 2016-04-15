@@ -2,7 +2,6 @@ package com.example.ferrero.sumi_e;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -23,7 +22,7 @@ public class FragmentLearnStep3b extends Fragment implements View.OnTouchListene
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        myFragmentView = inflater.inflate(R.layout.fragment_learn_layout3, container, false);
+        myFragmentView = inflater.inflate(R.layout.fragment_learn_layout3b, container, false);
 
         imgpiatto = (ImageView) myFragmentView.findViewById(R.id.piatto);
         imgpiatto.setOnTouchListener(this);
@@ -37,7 +36,13 @@ public class FragmentLearnStep3b extends Fragment implements View.OnTouchListene
         return myFragmentView;
     }
 
-
+    /*
+     *
+     * This method checks if the user is tapping inside the image of the dish, the image of the suzuri and
+     * the image of the glass of water. If an image is pressed correctly the variable imgPremuta is setted
+     * and the method checkstate() is called.
+     *
+    */
     @Override
     public boolean onTouch(View view, MotionEvent event) {
 
@@ -113,6 +118,12 @@ public class FragmentLearnStep3b extends Fragment implements View.OnTouchListene
         return false;
     }
 
+    /*
+     *
+     * This method checks if the user taps the image in the right order and change the images on the
+     * screen accordingly. When the process is finished the button Continue is shown.
+     *
+    */
     public void checkState() {
         switch (stato) {
             case 0:

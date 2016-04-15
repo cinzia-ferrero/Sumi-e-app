@@ -1,13 +1,7 @@
 package com.example.ferrero.sumi_e;
 
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -28,7 +22,7 @@ public class FragmentLearnStep2b extends Fragment implements View.OnTouchListene
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        myFragmentView = inflater.inflate(R.layout.fragment_learn_layout2, container, false);
+        myFragmentView = inflater.inflate(R.layout.fragment_learn_layout2b, container, false);
 
         img = (ImageView) myFragmentView.findViewById(R.id.suzuri);
         img.setOnTouchListener(this);
@@ -36,6 +30,12 @@ public class FragmentLearnStep2b extends Fragment implements View.OnTouchListene
         return myFragmentView;
     }
 
+    /*
+    *
+    * This method checks if the user's finger is inside the image of the suzuri and move only horizontally.
+    * Furthermore it increments the progress bar for the user's points.
+    *
+     */
     @Override
     public boolean onTouch(View view, MotionEvent event) {
         boolean result;
@@ -49,7 +49,6 @@ public class FragmentLearnStep2b extends Fragment implements View.OnTouchListene
 
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    //Register the first touch on TouchDown and this should not change unless finger goes up.
                     currentX = event.getRawX();
                     currentY = event.getRawY();
                     prevX = currentX;
@@ -78,6 +77,7 @@ public class FragmentLearnStep2b extends Fragment implements View.OnTouchListene
             }
             return result;
         } else {
+            // when the user obtains 100 points can continue to the next step
             Button buttonContinua = (Button) myFragmentView.findViewById(R.id.id_button2continua);
             buttonContinua.setVisibility(View.VISIBLE);
             img.setImageResource(R.drawable.suzuri_withink);
