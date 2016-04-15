@@ -50,7 +50,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="@drawable/custom_button_continue"
-        android:onClick="button5continue"
+        android:onClick="button5Bcontinue"
         android:text="Continue"
         android:visibility="invisible" />
 
@@ -60,7 +60,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:background="@drawable/custom_button_back"
-        android:onClick="button5back"
+        android:onClick="button5Bback"
         android:text="Back" />
 
 

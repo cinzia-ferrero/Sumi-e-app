@@ -67,7 +67,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="@drawable/custom_button_continue"
-        android:onClick="button2continue"
+        android:onClick="button2Bcontinue"
         android:text="Continue"
         android:visibility="invisible" />
 
@@ -77,7 +77,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:background="@drawable/custom_button_back"
-        android:onClick="button2back"
+        android:onClick="button2Bback"
         android:text="Back" />
 
 

@@ -7,13 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentLearn1 extends Fragment {
+public class FragmentLearnStep4a extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.v("FragmentLearn1b", "entrato in onCreateView");
-        View myFragmentView = inflater.inflate(R.layout.fragment_learn_layout1, container, false);
+        View myFragmentView = inflater.inflate(R.layout.fragment_learn_layout4a, container, false);
         return myFragmentView;
     }
 

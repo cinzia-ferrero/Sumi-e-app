@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class FragmentLearn5 extends Fragment implements View.OnTouchListener {
+public class FragmentLearnStep5b extends Fragment implements View.OnTouchListener {
     View myFragmentView;
     ImageView imgpiatto;
     ImageView imgsuzuri;
@@ -21,7 +21,6 @@ public class FragmentLearn5 extends Fragment implements View.OnTouchListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.v("FragmentLearn4", "entrato in onCreateView");
         myFragmentView = inflater.inflate(R.layout.fragment_learn_layout5, container, false);
 
         imgpiatto = (ImageView) myFragmentView.findViewById(R.id.piatto_nero5);
@@ -51,14 +50,12 @@ public class FragmentLearn5 extends Fragment implements View.OnTouchListener {
             if (xTouch > ulcx && xTouch < ulcx + width && yTouch > ulcy && yTouch < ulcy + height) {
                 imgPremuta = 1;
                 checkState();
-                Log.v("FragmentLearn5", "premuta immagine suzuri");
                 return true;
             }
             return false;
         }
 
         if ((ImageView) view == imgpiatto) {
-            Log.v("FragmentLearn5", "entrato in onTouch piatto");
             int pos[] = new int[2];
             imgpiatto.getLocationOnScreen(pos);
             float ulcx = pos[0];
@@ -75,35 +72,28 @@ public class FragmentLearn5 extends Fragment implements View.OnTouchListener {
             double distanceFromCenter = Math.sqrt(Math.pow((double) (centerX - xTouch), (double) 2)
                     + Math.pow((double) (centerY - yTouch), (double) 2));
 
-            Log.v("FragmentLearn3", "centerX: " + centerX + "\ncenterY: " + centerY + "\nradius: " + radius + "\nxTouch: " + xTouch + "\nyTouch: " + yTouch + "\ndistance: " + distanceFromCenter);
 
             if (distanceFromCenter < radius + radius * 0.2 && distanceFromCenter > radius - radius * 0.2) {
-                Log.v("FragmentLearn5", "distanceFromCenter ooookkk");
-                // 2° quadrante
-                if (xTouch > centerX && yTouch > centerY) {
-                    Log.v("FragmentLearn5", "2 quadr");
-                    imgPremuta = 3;
-                    checkState();
-                }
                 // 1° quadrante
                 if (xTouch > centerX && yTouch < centerY) {
-                    Log.v("FragmentLearn5", "1 quadr");
                     imgPremuta = 2;
                     checkState();
                 }
-                // 4° quadrante
-                if (xTouch < centerX && yTouch < centerY) {
-                    Log.v("FragmentLearn5", "4 quadr");
-                    imgPremuta = 5;
+                // 2° quadrante
+                if (xTouch > centerX && yTouch > centerY) {
+                    imgPremuta = 3;
                     checkState();
                 }
                 // 3° quadrante
                 if (xTouch < centerX && yTouch > centerY) {
-                    Log.v("FragmentLearn5", "3 quadr");
                     imgPremuta = 4;
                     checkState();
                 }
-                Log.v("FragmentLearn5", "premuto bordo piatto");
+                // 4° quadrante
+                if (xTouch < centerX && yTouch < centerY) {
+                    imgPremuta = 5;
+                    checkState();
+                }
                 return true;
             }
             return false;

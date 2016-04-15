@@ -1,10 +1,6 @@
 package com.example.ferrero.sumi_e;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,10 +13,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -33,17 +25,6 @@ public class MainActivity extends AppCompatActivity
         toolbar.setNavigationIcon(null);
         toolbar.getMenu().clear();
         setSupportActionBar(toolbar);
-
-        /*
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        */
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -81,125 +62,10 @@ public class MainActivity extends AppCompatActivity
         transaction.commit();
     }
 
-    public void button0continue(View view) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentLearn1 firstFragment = new FragmentLearn1();
-        transaction.replace(R.id.fragment_container, firstFragment);
-        transaction.addToBackStack(firstFragment.getClass().getName());
-        transaction.commit();
-    }
-
-    public void button1continue(View view) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentLearn2a secondAFragment = new FragmentLearn2a();
-        transaction.replace(R.id.fragment_container, secondAFragment);
-        transaction.addToBackStack(secondAFragment.getClass().getName());
-        transaction.commit();
-    }
-
-    public void button1back(View view) {
-        getSupportFragmentManager().popBackStack();
-    }
-
-    public void button2acontinue(View view) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentLearn2 secondFragment = new FragmentLearn2();
-        transaction.replace(R.id.fragment_container, secondFragment);
-        transaction.addToBackStack(secondFragment.getClass().getName());
-        transaction.commit();
-    }
-
-    public void button2aback(View view) {
-        getSupportFragmentManager().popBackStack();
-    }
-
-    public void button2continue(View view) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentLearn3a thirdAFragment = new FragmentLearn3a();
-        transaction.replace(R.id.fragment_container, thirdAFragment);
-        transaction.addToBackStack(thirdAFragment.getClass().getName());
-        transaction.commit();
-    }
-
-    public void button2back(View view) {
-        getSupportFragmentManager().popBackStack();
-    }
-
-    public void button3acontinue(View view) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentLearn3 thirdFragment = new FragmentLearn3();
-        transaction.replace(R.id.fragment_container, thirdFragment);
-        transaction.addToBackStack(thirdFragment.getClass().getName());
-        transaction.commit();
-    }
-
-    public void button3aback(View view) {
-        getSupportFragmentManager().popBackStack();
-    }
-
-    public void button3continue(View view) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentLearn4a fourthAFragment = new FragmentLearn4a();
-        transaction.replace(R.id.fragment_container, fourthAFragment);
-        transaction.addToBackStack(fourthAFragment.getClass().getName());
-        transaction.commit();
-    }
-
-    public void button3back(View view) {
-        getSupportFragmentManager().popBackStack();
-    }
-
-    public void button4acontinue(View view) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentLearn4 fourthFragment = new FragmentLearn4();
-        transaction.replace(R.id.fragment_container, fourthFragment);
-        transaction.addToBackStack(fourthFragment.getClass().getName());
-        transaction.commit();
-    }
-
-    public void button4aback(View view) {
-        getSupportFragmentManager().popBackStack();
-    }
-
-    public void button4continue(View view) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentLearn5a fifthAFragment = new FragmentLearn5a();
-        transaction.replace(R.id.fragment_container, fifthAFragment);
-        transaction.addToBackStack(fifthAFragment.getClass().getName());
-        transaction.commit();
-    }
-
-    public void button4back(View view) {
-        getSupportFragmentManager().popBackStack();
-    }
-
-    public void button5acontinue(View view) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentLearn5 fifthFragment = new FragmentLearn5();
-        transaction.replace(R.id.fragment_container, fifthFragment);
-        transaction.addToBackStack(fifthFragment.getClass().getName());
-        transaction.commit();
-    }
-
-    public void button5aback(View view) {
-        getSupportFragmentManager().popBackStack();
-    }
-
-    public void button5continue(View view) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        FragmentLearn6 sixthFragment = new FragmentLearn6();
-        transaction.replace(R.id.fragment_container, sixthFragment);
-        transaction.addToBackStack(sixthFragment.getClass().getName());
-        transaction.commit();
-    }
-
-    public void button5back(View view) {
-        getSupportFragmentManager().popBackStack();
-    }
-
-    public void button6back(View view) {
-        getSupportFragmentManager().popBackStack();
-    }
+    /*
+    * Methods to manage the menu
+    *
+    */
 
     @Override
     public void onBackPressed() {
@@ -211,38 +77,14 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    /*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-    */
-
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        // Handle navigation in the menu
         int id = item.getItemId();
         Fragment fragment = null;
         Class fragmentClass;
 
+        // Get the class of the fragment of the section selected
         switch (id) {
             case R.id.nav_whatIs:
                 fragmentClass = FragmentWhatIs.class;
@@ -251,22 +93,26 @@ public class MainActivity extends AppCompatActivity
                 fragmentClass = FragmentGallery.class;
                 break;
             case R.id.nav_learn:
-                fragmentClass = FragmentLearn0.class;
+                fragmentClass = FragmentLearnStep0.class;
                 break;
             case R.id.nav_share:
+                // Launch intent to send a message for sharing
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT,
-                        "We're keeping a kitten hostage. Share this app with your friends if you don't want the kitten to suffer. Link: https://github.com/cinzia-ferrero/Sumi-e-app  \np.s. Think about the kitten");
+                        "If you want to read the code of this app, follow this link: https://github.com/cinzia-ferrero/Sumi-e-app");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
-                return false;
-
-
+                // Close menu
+                item.setChecked(false);
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+                return true;
             default:
                 fragmentClass = FragmentWhatIs.class;
         }
 
+        // Get the fragment
         try {
             fragment = (Fragment) fragmentClass.newInstance();
         } catch (Exception e) {
@@ -277,15 +123,142 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit();
 
-        // Highlight the selected item has been done by NavigationView
+        // Highlight the selected item in the navigation menu
         item.setChecked(true);
-        // Set action bar title
+        // Set the title in the toolbar
         setTitle(item.getTitle());
         // Close the navigation drawer
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    /*
+    * Methods to manage the buttons Back and Continue in the pages of the Learn section
+    *
+    */
+
+    public void button0continue(View view) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentLearnStep1 thisFragment = new FragmentLearnStep1();
+        transaction.replace(R.id.fragment_container, thisFragment);
+        transaction.addToBackStack(thisFragment.getClass().getName());
+        transaction.commit();
+    }
+
+    public void button1continue(View view) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentLearnStep2a thisFragment = new FragmentLearnStep2a();
+        transaction.replace(R.id.fragment_container, thisFragment);
+        transaction.addToBackStack(thisFragment.getClass().getName());
+        transaction.commit();
+    }
+
+    public void button1back(View view) {
+        getSupportFragmentManager().popBackStack();
+    }
+
+    public void button2Acontinue(View view) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentLearnStep2b thisFragment = new FragmentLearnStep2b();
+        transaction.replace(R.id.fragment_container, thisFragment);
+        transaction.addToBackStack(thisFragment.getClass().getName());
+        transaction.commit();
+    }
+
+    public void button2Aback(View view) {
+        getSupportFragmentManager().popBackStack();
+    }
+
+    public void button2Bcontinue(View view) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentLearnStep3a thisFragment = new FragmentLearnStep3a();
+        transaction.replace(R.id.fragment_container, thisFragment);
+        transaction.addToBackStack(thisFragment.getClass().getName());
+        transaction.commit();
+    }
+
+    public void button2Bback(View view) {
+        getSupportFragmentManager().popBackStack();
+    }
+
+    public void button3Acontinue(View view) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentLearnStep3b thisFragment = new FragmentLearnStep3b();
+        transaction.replace(R.id.fragment_container, thisFragment);
+        transaction.addToBackStack(thisFragment.getClass().getName());
+        transaction.commit();
+    }
+
+    public void button3Aback(View view) {
+        getSupportFragmentManager().popBackStack();
+    }
+
+    public void button3Bcontinue(View view) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentLearnStep4a thisFragment = new FragmentLearnStep4a();
+        transaction.replace(R.id.fragment_container, thisFragment);
+        transaction.addToBackStack(thisFragment.getClass().getName());
+        transaction.commit();
+    }
+
+    public void button3Bback(View view) {
+        getSupportFragmentManager().popBackStack();
+    }
+
+    public void button4Acontinue(View view) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentLearnStep4b thisFragment = new FragmentLearnStep4b();
+        transaction.replace(R.id.fragment_container, thisFragment);
+        transaction.addToBackStack(thisFragment.getClass().getName());
+        transaction.commit();
+    }
+
+    public void button4Aback(View view) {
+        getSupportFragmentManager().popBackStack();
+    }
+
+    public void button4Bcontinue(View view) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentLearnStep5a thisFragment = new FragmentLearnStep5a();
+        transaction.replace(R.id.fragment_container, thisFragment);
+        transaction.addToBackStack(thisFragment.getClass().getName());
+        transaction.commit();
+    }
+
+    public void button4Bback(View view) {
+        getSupportFragmentManager().popBackStack();
+    }
+
+    public void button5Acontinue(View view) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentLearnStep5b thisFragment = new FragmentLearnStep5b();
+        transaction.replace(R.id.fragment_container, thisFragment);
+        transaction.addToBackStack(thisFragment.getClass().getName());
+        transaction.commit();
+    }
+
+    public void button5Aback(View view) {
+        getSupportFragmentManager().popBackStack();
+    }
+
+    public void button5Bcontinue(View view) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        FragmentLearnStep6 thisFragment = new FragmentLearnStep6();
+        transaction.replace(R.id.fragment_container, thisFragment);
+        transaction.addToBackStack(thisFragment.getClass().getName());
+        transaction.commit();
+    }
+
+    public void button5Bback(View view) {
+        getSupportFragmentManager().popBackStack();
+    }
+
+    public void button6back(View view) {
+        getSupportFragmentManager().popBackStack();
+    }
+
+
 
 
 }

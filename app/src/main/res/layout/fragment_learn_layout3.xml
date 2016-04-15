@@ -60,7 +60,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:background="@drawable/custom_button_continue"
-        android:onClick="button3continue"
+        android:onClick="button3Bcontinue"
         android:text="Continue"
         android:visibility="invisible" />
 
@@ -70,7 +70,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:background="@drawable/custom_button_back"
-        android:onClick="button3back"
+        android:onClick="button3Bback"
         android:text="Back" />
 
 

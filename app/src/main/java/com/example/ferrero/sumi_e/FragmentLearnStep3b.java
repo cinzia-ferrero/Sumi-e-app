@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class FragmentLearn3 extends Fragment implements View.OnTouchListener {
+public class FragmentLearnStep3b extends Fragment implements View.OnTouchListener {
 
     View myFragmentView;
     ImageView imgpiatto;
@@ -42,7 +42,6 @@ public class FragmentLearn3 extends Fragment implements View.OnTouchListener {
     public boolean onTouch(View view, MotionEvent event) {
 
         if ((ImageView) view == imgpiatto) {
-            Log.v("FragmentLearn3", "entrato in onTouch piatto");
             int pos[] = new int[2];
             imgpiatto.getLocationOnScreen(pos);
             float ulcx = pos[0];
@@ -59,12 +58,9 @@ public class FragmentLearn3 extends Fragment implements View.OnTouchListener {
             double distanceFromCenter = Math.sqrt(Math.pow((double) (centerX - xTouch), (double) 2)
                     + Math.pow((double) (centerY - yTouch), (double) 2));
 
-            //Log.v("FragmentLearn3", "centerX: "+centerX+"\ncenterY: "+centerY+"\nradius: "+radius+"\nxTouch: "+xTouch+"\nyTouch: "+yTouch+"\ndistance: "+distanceFromCenter);
-
             if (distanceFromCenter < radius) {
                 imgPremuta = 1;
                 checkState();
-                Log.v("FragmentLearn3", "premuta immagine piatto");
                 return true;
             }
             return false;
@@ -84,7 +80,6 @@ public class FragmentLearn3 extends Fragment implements View.OnTouchListener {
             if (xTouch > ulcx && xTouch < ulcx + width && yTouch > ulcy && yTouch < ulcy + height) {
                 imgPremuta = 2;
                 checkState();
-                Log.v("FragmentLearn3", "premuta immagine suzuri");
                 return true;
             }
             return false;
@@ -107,11 +102,8 @@ public class FragmentLearn3 extends Fragment implements View.OnTouchListener {
             double distanceFromCenter = Math.sqrt(Math.pow((double) (centerX - xTouch), (double) 2)
                     + Math.pow((double) (centerY - yTouch), (double) 2));
 
-            //Log.v("FragmentLearn3", "centerX: "+centerX+"\ncenterY: "+centerY+"\nradius: "+radius+"\nxTouch: "+xTouch+"\nyTouch: "+yTouch+"\ndistance: "+distanceFromCenter);
-
             if (distanceFromCenter < radius) {
                 imgPremuta = 3;
-                Log.v("FragmentLearn3", "premuta immagine acqua");
                 checkState();
                 return true;
             }

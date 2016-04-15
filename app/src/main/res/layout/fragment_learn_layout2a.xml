@@ -61,14 +61,14 @@
             style="@style/style_button_back"
             android:layout_alignParentLeft="true"
             android:background="@drawable/custom_button_back"
-            android:onClick="button2aback"
+            android:onClick="button2Aback"
             android:text="Back" />
 
         <Button
             style="@style/style_button_continue"
             android:layout_alignParentRight="true"
             android:background="@drawable/custom_button_continue"
-            android:onClick="button2acontinue"
+            android:onClick="button2Acontinue"
             android:text="Continue" />
 
     </RelativeLayout>

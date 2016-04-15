@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-public class FragmentLearn4 extends Fragment implements View.OnTouchListener {
+public class FragmentLearnStep4b extends Fragment implements View.OnTouchListener {
     public int points = 0;
     View myFragmentView;
     ImageView imgpiatto;
@@ -27,7 +27,6 @@ public class FragmentLearn4 extends Fragment implements View.OnTouchListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.v("FragmentLearn4", "entrato in onCreateView");
         myFragmentView = inflater.inflate(R.layout.fragment_learn_layout4, container, false);
 
         imgpiatto = (ImageView) myFragmentView.findViewById(R.id.piatto_nero);
@@ -50,7 +49,6 @@ public class FragmentLearn4 extends Fragment implements View.OnTouchListener {
 
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    //Log.v("FragmentLearn4", "enter ACTION_DOWN");
                     currentX = event.getRawX();
                     currentY = event.getRawY();
                     prevX = currentX;
@@ -61,9 +59,7 @@ public class FragmentLearn4 extends Fragment implements View.OnTouchListener {
                     return true;
 
                 case MotionEvent.ACTION_MOVE:
-                    //Log.v("FragmentLearn4", "enter ACTION_MOVE");
                     if (points < 100 && down == true) {
-                        //Log.v("FragmentLearn4 ok", "entrato nell'if points-move");
                         int pos[] = new int[2];
                         imgpiatto.getLocationOnScreen(pos);
                         float ulcx = pos[0];
@@ -80,17 +76,14 @@ public class FragmentLearn4 extends Fragment implements View.OnTouchListener {
                         double distanceFromCenter = Math.sqrt(Math.pow((double) (centerX - xTouch), (double) 2)
                                 + Math.pow((double) (centerY - yTouch), (double) 2));
                         if (distanceFromCenter < radius) {
-                            //Log.v("FragmentLearn4 ok", "distanza dal centro verificata");
                             currentX = event.getRawX();
                             currentY = event.getRawY();
-                            //Log.v("FragmentLearn4", "currentX: "+currentX+"\ncurrentY: "+currentY+"\nprevX: "+prevX+"\nprevY: "+prevY);
                             double distanceFromPrev = Math.sqrt(Math.pow((double) (prevX - xTouch), (double) 2)
                                     + Math.pow((double) (prevY - yTouch), (double) 2));
                             if (distanceFromPrev > width * 0.2) {
                                 prevX = currentX;
                                 prevY = currentY;
                                 points += 2;
-                                //Log.v("FragmentLearn4 ok", "distanza verificata, points: " + points);
                                 progressBar.setProgress(points);
                             }
                         }
@@ -101,7 +94,6 @@ public class FragmentLearn4 extends Fragment implements View.OnTouchListener {
                     return true;
 
                 case MotionEvent.ACTION_UP:
-                    //Log.v("FragmentLearn4", "enter ACTION_UP");
                     prevX = 0;
                     prevY = 0;
                     down = false;
@@ -126,7 +118,6 @@ public class FragmentLearn4 extends Fragment implements View.OnTouchListener {
             if (xTouch > ulcx && xTouch < ulcx + width && yTouch > ulcy && yTouch < ulcy + height) {
                 imgPremuta = 2;
                 checkState();
-                //Log.v("FragmentLearn4", "premuta immagine suzuri");
                 return true;
             }
             return false;
